@@ -88,5 +88,5 @@ the above arrays will be saved.
 ## License
 Specify the project's license. For example:
 
-This project is licensed under the Apache 2.0 - see the LICENSE file for details.
+This project is licensed under the AGPL-3.0 license - see the LICENSE file for details.
 
