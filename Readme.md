@@ -2,7 +2,7 @@
 
 This repository contains the implementation of GNCE, a method to predict the cardinality
 of conjunctive queries over Knowledge Graphs. It is based on Graph Neural Networks
-and Knowledge Graph Embeddings. It is implemented in PyTorch. 
+and Knowledge Graph Embeddings and is implemented in PyTorch. 
 
 ## Table of Contents
 
@@ -86,7 +86,6 @@ the above arrays will be saved.
 
 
 ## License
-Specify the project's license. For example:
 
 This project is licensed under the AGPL-3.0 license - see the LICENSE file for details.
 
