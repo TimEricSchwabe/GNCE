@@ -163,27 +163,26 @@ def get_embeddings(dataset_name, kg_file, entities=None, remote=True, sparql_end
     return
 if __name__ == "__main__":
 
+    QUERY_FILE_PATH = '/home/tim/cardinality_estimator/Datasets/yago/star/Joined_Queries.json'
+    KG_FILE_PATH = "Datasets/yago/graph/yago.ttl"
+    KG_ENDPOINT = "http://localhost:8906/sparql/"
+    KG_NAME = "yago"
+
 
     #Get entities from queries:
     entities = []
     # Joined Queries
-    with open('/home/tim/cardinality_estimator/Datasets/yago/star/Joined_Queries.json', 'r') as f:
+    with open(QUERY_FILE_PATH, 'r') as f:
         queries = json.load(f)
     for query in queries:
         entities += query['x']
-
-    with open('/home/tim/cardinality_estimator/Datasets/yago/path/Joined_Queries.json', 'r') as f:
-       queries = json.load(f)
-    for query in queries:
-       entities += query['x']
-
 
     entities = list(set(entities))
     print('Using ', len(entities), ' entities for RDF2Vec')
 
 
     print('Starting...')
-    get_embeddings("yago", "Datasets/yago/graph/yago.ttl", remote=True, entities=entities, sparql_endpoint="http://localhost:8906/sparql/")
+    get_embeddings(KG_NAME, KG_FILE_PATH, remote=True, entities=entities, sparql_endpoint=KG_ENDPOINT)
 
 
 

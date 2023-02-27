@@ -244,7 +244,12 @@ class cardinality_estimator():
 
 
 if __name__ == "__main__":
-    model = cardinality_estimator("yago", None, sim_measure="cosine")
+
+    KG_NAME = 'yago'
+    QUERY_FILE_PATH = "Datasets/yago/path/Joined_Queries.json"
+    TRAIN = True
+
+    model = cardinality_estimator(KG_NAME, None, sim_measure="cosine")
 
     # Loading cleaned Dataset:
     with open("Datasets/yago/path/Joined_Queries.json") as f:
@@ -261,7 +266,7 @@ if __name__ == "__main__":
     #     test_data = json.load(f)
 
     # Train or evaluate the model on the dataset
-    model.train_GNN(train_data, test_data, epochs=100, train=True)
+    model.train_GNN(train_data, test_data, epochs=100, train=False)
 
 
 
