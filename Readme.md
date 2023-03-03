@@ -73,7 +73,7 @@ Make sure that the folder structure exists like:
 ### Training
 
 Next, you can train the GNN model to predict the cardinalities. 
-For that, the file `embeddings_generator.py` is used.
+For that, the file `cardinality_estimator.py` is used.
 Here, set the KG_NAME as well as QUERY_FILE_PATH to the same values as in the previous step.
 The TRAIN Flag can be used to indicate whether the model should be trained or not. If True,
 the model will be trained on 80% of the given queries and evaluated on the remaining 20%. 
